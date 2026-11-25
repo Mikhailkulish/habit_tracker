@@ -51,6 +51,12 @@ class User(AbstractUser):
         verbose_name="Аватар",
         help_text="Загрузите аватар",
     )
+    telegram_chat_id = models.CharField(
+        max_length=50,
+        blank=True,
+        null=True,
+        verbose_name="Telegram Chat ID"
+    )
 
     USERNAME_FIELD = "email"
     REQUIRED_FIELDS = []
